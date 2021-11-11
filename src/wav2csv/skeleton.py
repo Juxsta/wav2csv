@@ -77,19 +77,19 @@ def fib(samrate,data,input_filename:PosixPath,outputPath):
                             + output_filename("_Output_stereo_L.csv" ))
 
     elif len(wavData.columns) == 1:
-        print('Mono .wav file\n')
+        _logger.info('Mono .wav file\n')
         wavData.columns = ['M']
 
         wavData.to_csv(output_filename("_Output_mono.csv"), mode='w')
 
-        print('Save is done ' + output_filename('_Output_mono.csv'))
+        _logger.info('Save is done ' + output_filename('_Output_mono.csv'))
 
     else:
-        print('Multi channel .wav file\n')
-        print('number of channel : ' + len(wavData.columns) + '\n')
+        _logger.info('Multi channel .wav file\n')
+        _logger.info('number of channel : ' + len(wavData.columns) + '\n')
         wavData.to_csv(output_filename("Output_multi_channel.csv"), mode='w')
 
-        print('Save is done ' + output_filename('Output_multi_channel.csv'))
+        _logger.info('Save is done ' + output_filename('Output_multi_channel.csv'))
 
     return 
 
