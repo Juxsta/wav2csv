@@ -34,10 +34,18 @@ wav2csv
 =======
 
 
-    Add a short description here!
+    This project is based on `Lukious' wav-to-csv script
+<https://github.com/Lukious/wav-to-csv>`_. 
 
 
-A longer description of your project goes here...
+This project scaffolds the original wav-to-csv repo and adds console scripts with arg parsing.
+
+Installation can be done through `pip install .` within this repository.
+
+Examples
+====
+wav2csv wavfile.wav -o ../csvs
+
 
 
 .. _pyscaffold-notes:
